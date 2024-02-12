@@ -69,9 +69,9 @@
 <p class="caption" role="heading"><span class="caption-text">Manual Pages</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">nsd(8)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#synopsis">Synopsis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#synopsis">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">説明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">オプション</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#files">Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#diagnostics">Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#see-also">See Also</a></li>
@@ -116,7 +116,7 @@
   <section id="nsd-8">
 <h1>nsd(8)<a class="headerlink" href="#nsd-8" title="この見出しへのパーマリンク">¶</a></h1>
 <section id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="この見出しへのパーマリンク">¶</a></h2>
+<h2>概要<a class="headerlink" href="#synopsis" title="この見出しへのパーマリンク">¶</a></h2>
 <p><strong class="command">nsd</strong> [<a class="reference internal" href="#cmdoption-4"><code class="xref std std-option docutils literal notranslate"><span class="pre">-4</span></code></a>] [<a class="reference internal" href="#cmdoption-6"><code class="xref std std-option docutils literal notranslate"><span class="pre">-6</span></code></a>] [<a class="reference internal" href="#cmdoption-a"><code class="xref std std-option docutils literal notranslate"><span class="pre">-a</span></code></a>
 <code class="docutils literal notranslate"><span class="pre">ip-address[&#64;port]</span></code>] [<a class="reference internal" href="#cmdoption-c"><code class="xref std std-option docutils literal notranslate"><span class="pre">-c</span></code></a> <code class="docutils literal notranslate"><span class="pre">configfile</span></code>] [<a class="reference internal" href="#cmdoption-d"><code class="xref std std-option docutils literal notranslate"><span class="pre">-d</span></code></a>]
 [<a class="reference internal" href="#cmdoption-f"><code class="xref std std-option docutils literal notranslate"><span class="pre">-f</span></code></a> <code class="docutils literal notranslate"><span class="pre">database</span></code>] [<a class="reference internal" href="#cmdoption-h"><code class="xref std std-option docutils literal notranslate"><span class="pre">-h</span></code></a>] [<a class="reference internal" href="#cmdoption-i"><code class="xref std std-option docutils literal notranslate"><span class="pre">-i</span></code></a> <code class="docutils literal notranslate"><span class="pre">identity</span></code>]
@@ -127,24 +127,12 @@
 [<a class="reference internal" href="#cmdoption-2"><code class="xref std std-option docutils literal notranslate"><span class="pre">-v</span></code></a>]</p>
 </section>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="この見出しへのパーマリンク">¶</a></h2>
-<p><strong class="command">NSD</strong> is a complete implementation of an  authoritative DNS nameserver.
-Upon startup, <strong class="command">NSD</strong> will read the database specified with <a class="reference internal" href="#cmdoption-f"><code class="xref std std-option docutils literal notranslate"><span class="pre">-f</span></code></a>
-<code class="docutils literal notranslate"><span class="pre">database</span></code> argument and put itself into background and answers queries on port
-53 or a different port specified with <a class="reference internal" href="#cmdoption-1"><code class="xref std std-option docutils literal notranslate"><span class="pre">-p</span></code></a> <code class="docutils literal notranslate"><span class="pre">port</span></code> option. The database
-is created if it does not exist. By default, <strong class="command">NSD</strong> will bind to all
-local interfaces available. Use the <a class="reference internal" href="#cmdoption-a"><code class="xref std std-option docutils literal notranslate"><span class="pre">-a</span></code></a> <code class="docutils literal notranslate"><span class="pre">ip-address[&#64;port]</span></code> option to
-specify a single particular interface address to be bound. If this  option is
-given more than once, <strong class="command">NSD</strong> will bind its UDP and TCP sockets to all
-the specified ip-addresses separately. If IPv6 is enabled when <strong class="command">NSD</strong> is
-compiled an IPv6 address can also be specified.</p>
+<h2>説明<a class="headerlink" href="#description" title="この見出しへのパーマリンク">¶</a></h2>
+<p><strong class="command">NSD</strong> は権威DNSサーバーの完全な実装です。起動すると <strong class="command">NSD</strong> は <a class="reference internal" href="#cmdoption-f"><code class="xref std std-option docutils literal notranslate"><span class="pre">-f</span></code></a> <code class="docutils literal notranslate"><span class="pre">database</span></code> 引数で指定されたデータベースを読み込み、バックグラウンドになり、53番ポートか <a class="reference internal" href="#cmdoption-1"><code class="xref std std-option docutils literal notranslate"><span class="pre">-p</span></code></a> <code class="docutils literal notranslate"><span class="pre">port</span></code> オプションで指定された異なるポートでクエリーに応答します。databaseは存在しなければ作成されます。デフォルトでは <strong class="command">NSD</strong> は利用できるすべてのローカルインターフェイスにバインドします。option:<cite>-a</cite> <code class="docutils literal notranslate"><span class="pre">ip-address[&#64;port]</span></code> オプションを使用すると、バインドされる特定のインターフェースアドレスを指定できます。このオプションを複数回与えると、 <strong class="command">NSD</strong> は指定されたすべてのIPアドレスにそれぞれUDPととTCPのソケットをバインドします。command:<a href="#id1"><span class="problematic" id="id2">`</span></a>NSD`のコンパイル時にIPv6が有効になっていれば、IPv6アドレスも指定できます。</p>
 </section>
 <section id="options">
-<h2>Options<a class="headerlink" href="#options" title="この見出しへのパーマリンク">¶</a></h2>
-<p>All the options can be specified in the configfile (<a class="reference internal" href="#cmdoption-c"><code class="xref std std-option docutils literal notranslate"><span class="pre">-c</span></code></a> argument),
-except for the <a class="reference internal" href="#cmdoption-2"><code class="xref std std-option docutils literal notranslate"><span class="pre">-v</span></code></a> and <a class="reference internal" href="#cmdoption-h"><code class="xref std std-option docutils literal notranslate"><span class="pre">-h</span></code></a> options. If options are specified
-on the commandline,  the options on the commandline take precedence over the
-options in the configfile.</p>
+<h2>オプション<a class="headerlink" href="#options" title="この見出しへのパーマリンク">¶</a></h2>
+<p><a class="reference internal" href="#cmdoption-2"><code class="xref std std-option docutils literal notranslate"><span class="pre">-v</span></code></a> と <a class="reference internal" href="#cmdoption-h"><code class="xref std std-option docutils literal notranslate"><span class="pre">-h</span></code></a> オプションを除いて、すべてのオプションは設定ファイル（ <a class="reference internal" href="#cmdoption-c"><code class="xref std std-option docutils literal notranslate"><span class="pre">-c</span></code></a> 引数 ）で指定できます。If options are specified on the commandline,  the options on the commandline take precedence over the options in the configfile.</p>
 <p>Normally <strong class="command">NSD</strong> should be started with the <em class="manpage"><a class="manpage reference external" href="nsd-control.html">nsd-control(8)</a></em>
 <code class="docutils literal notranslate"><span class="pre">start</span></code> command invoked from a <code class="file docutils literal notranslate"><span class="pre">/etc/rc.d/nsd.sh</span></code> script or similar at
 the operating system startup.</p>

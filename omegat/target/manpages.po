@@ -6,7 +6,7 @@
 msgid ""
 msgstr "Project-Id-Version: NSD 4.3.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-12 10:09+0000\n"
+"POT-Creation-Date: 2024-02-12 11:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -73,7 +73,7 @@ msgid ""
 "argument), except for the :option:`-v` and :option:`-h` options. If "
 "options are specified on the commandline,  the options on the commandline"
 " take precedence over the options in the configfile."
-msgstr ""
+msgstr ":option:`-v` と :option:`-h` オプションを除いて、すべてのオプションは設定ファイル（ :option:`-c` 引数 ）で指定できます。If options are specified on the commandline,  the options on the commandline take precedence over the options in the configfile."
 
 #: ../../source/manpages/nsd.rst:38
 msgid ""

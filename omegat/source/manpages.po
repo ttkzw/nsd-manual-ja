@@ -3,12 +3,10 @@
 # This file is distributed under the same license as the NSD package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
-#, fuzzy
 msgid ""
-msgstr ""
-"Project-Id-Version: NSD 4.3.9\n"
+msgstr "Project-Id-Version: NSD 4.3.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-12 10:09+0000\n"
+"POT-Creation-Date: 2024-02-12 11:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -28,7 +26,7 @@ msgstr ""
 #: ../../source/manpages/nsd-control.rst:5 ../../source/manpages/nsd.conf.rst:5
 #: ../../source/manpages/nsd.rst:5
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/manpages/nsd.rst:7
 msgid ""
@@ -47,7 +45,7 @@ msgstr ""
 #: ../../source/manpages/nsd-control.rst:10
 #: ../../source/manpages/nsd.conf.rst:10 ../../source/manpages/nsd.rst:17
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/manpages/nsd.rst:19
 msgid ""
@@ -62,12 +60,12 @@ msgid ""
 "given more than once, :command:`NSD` will bind its UDP and TCP sockets to"
 " all the specified ip-addresses separately. If IPv6 is enabled when "
 ":command:`NSD` is compiled an IPv6 address can also be specified."
-msgstr ""
+msgstr ":command:`NSD` は権威DNSサーバーの完全な実装です。起動すると :command:`NSD` は :option:`-f` ``database`` 引数で指定されたデータベースを読み込み、バックグラウンドになり、53番ポートか :option:`-p` ``port`` オプションで指定された異なるポートでクエリーに応答します。databaseは存在しなければ作成されます。デフォルトでは :command:`NSD` は利用できるすべてのローカルインターフェイスにバインドします。option:`-a` ``ip-address[@port]`` オプションを使用すると、バインドされる特定のインターフェースアドレスを指定できます。このオプションを複数回与えると、 :command:`NSD` は指定されたすべてのIPアドレスにそれぞれUDPととTCPのソケットをバインドします。command:`NSD`のコンパイル時にIPv6が有効になっていれば、IPv6アドレスも指定できます。"
 
 #: ../../source/manpages/nsd-checkconf.rst:23
 #: ../../source/manpages/nsd-checkzone.rst:18 ../../source/manpages/nsd.rst:31
 msgid "Options"
-msgstr ""
+msgstr "オプション"
 
 #: ../../source/manpages/nsd.rst:33
 msgid ""
@@ -75,7 +73,7 @@ msgid ""
 "argument), except for the :option:`-v` and :option:`-h` options. If "
 "options are specified on the commandline,  the options on the commandline"
 " take precedence over the options in the configfile."
-msgstr ""
+msgstr ":option:`-v` と :option:`-h` オプションを除いて、すべてのオプションは設定ファイル（ :option:`-c` 引数 ）で指定できます。If options are specified on the commandline,  the options on the commandline take precedence over the options in the configfile."
 
 #: ../../source/manpages/nsd.rst:38
 msgid ""

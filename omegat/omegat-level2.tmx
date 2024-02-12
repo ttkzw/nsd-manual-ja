@@ -14,6 +14,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>All the options can be specified in the configfile (:option:`-c` argument), except for the :option:`-v` and :option:`-h` options.</seg>
+      </tuv>
+      <tuv xml:lang="ja" changeid="taki" changedate="20240212T115303Z" creationid="taki" creationdate="20240212T115303Z">
+        <seg>:option:`-v` と :option:`-h` オプションを除いて、すべてのオプションは設定ファイル（ :option:`-c` 引数 ）で指定できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>By default, :command:`NSD` will bind to all local interfaces available.</seg>
       </tuv>
       <tuv xml:lang="ja" changeid="taki" changedate="20240212T065904Z" creationid="taki" creationdate="20240212T065703Z">
