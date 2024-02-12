@@ -8,16 +8,80 @@
       <tuv lang="en-US">
         <seg>:command:`NSD` is a complete implementation of an  authoritative DNS nameserver.</seg>
       </tuv>
-      <tuv lang="ja" changeid="taki" changedate="20240212T064329Z" creationid="taki" creationdate="20240212T064329Z">
-        <seg>:command:`NSD`は権威DNSサーバーの完全な実装です。</seg>
+      <tuv lang="ja" changeid="taki" changedate="20240212T064620Z" creationid="taki" creationdate="20240212T064329Z">
+        <seg>:command:`NSD` は権威DNSサーバーの完全な実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>By default, :command:`NSD` will bind to all local interfaces available.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="taki" changedate="20240212T065904Z" creationid="taki" creationdate="20240212T065703Z">
+        <seg>デフォルトでは :command:`NSD` は利用できるすべてのローカルインターフェイスにバインドします。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en-US">
         <seg>Description</seg>
       </tuv>
-      <tuv lang="ja" changeid="taki" changedate="20240212T064158Z" creationid="taki" creationdate="20240212T064158Z">
+      <tuv lang="ja" changeid="taki" changedate="20240212T064603Z" creationid="taki" creationdate="20240212T064158Z">
+        <seg>説明</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>If IPv6 is enabled when :command:`NSD` is compiled an IPv6 address can also be specified.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="taki" changedate="20240212T070900Z" creationid="taki" creationdate="20240212T070900Z">
+        <seg>command:`NSD`のコンパイル時にIPv6が有効になっていれば、IPv6アドレスも指定できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>If this  option is given more than once, :command:`NSD` will bind its UDP and TCP sockets to all the specified ip-addresses separately.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="taki" changedate="20240212T070732Z" creationid="taki" creationdate="20240212T070732Z">
+        <seg>このオプションを複数回与えると、 :command:`NSD` は指定されたすべてのIPアドレスにそれぞれUDPととTCPのソケットをバインドします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Options</seg>
+      </tuv>
+      <tuv lang="ja" changeid="taki" changedate="20240212T070944Z" creationid="taki" creationdate="20240212T070944Z">
+        <seg>オプション</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Synopsis</seg>
+      </tuv>
+      <tuv lang="ja" changeid="taki" changedate="20240212T064557Z" creationid="taki" creationdate="20240212T064557Z">
         <seg>概要</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The database is created if it does not exist.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="taki" changedate="20240212T065723Z" creationid="taki" creationdate="20240212T065723Z">
+        <seg>databaseは存在しなければ作成されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Upon startup, :command:`NSD` will read the database specified with :option:`-f` ``database`` argument and put itself into background and answers queries on port 53 or a different port specified with :option:`-p` ``port`` option.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="taki" changedate="20240212T065238Z" creationid="taki" creationdate="20240212T065238Z">
+        <seg>起動すると :command:`NSD` は :option:`-f` ``database`` 引数で指定されたデータベースを読み込み、バックグラウンドになり、53番ポートか :option:`-p` ``port`` オプションで指定された異なるポートでクエリーに応答します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Use the :option:`-a` ``ip-address[@port]`` option to specify a single particular interface address to be bound.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="taki" changedate="20240212T070221Z" creationid="taki" creationdate="20240212T070221Z">
+        <seg>option:`-a` ``ip-address[@port]`` オプションを使用すると、バインドされる特定のインターフェースアドレスを指定できます。</seg>
       </tuv>
     </tu>
 <!-- Alternative translations -->
