@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001–2024, NLnet Labs
+# This file is distributed under the same license as the NSD package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NSD 4.3.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-12 09:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/installation.rst:2
+msgid "Installation"
+msgstr ""
+
+#: ../../source/installation.rst:4
+msgid ""
+"To install your own copy of NSD you have two options: use the version "
+"provided by your package manager, or download the source and building it "
+"yourself."
+msgstr ""
+
+#: ../../source/installation.rst:7
+msgid ""
+"Installing via the `package manager "
+"<https://repology.org/project/nsd/versions>`_ is the easiest option, and "
+"on most systems even trivial. The downside is the distributed version can"
+" be outdated for some distributions or not have all the compile-time "
+"options included that you want. Building and compiling NSD yourself "
+"ensures that you have the latest version and all the compile-time options"
+" you desire."
+msgstr ""
+
+#: ../../source/installation.rst:15
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/installation.rst:17
+msgid ""
+"NSD consists of two programs: the zone compiler ``zonec`` and the name "
+"server ``nsd`` itself. The name server works with an intermediate "
+"database prepared by the zone compiler from standard zone files."
+msgstr ""
+
+#: ../../source/installation.rst:21
+msgid ""
+"For NSD operation this means that zones have to be compiled by ``zonec`` "
+"before NSD can use them. All this can be controlled via ``rc.d`` "
+"(SIGTERM,  SIGHUP) or :command:`nsd-control`, and uses a simple "
+"configuration file  ``nsd.conf``."
+msgstr ""
+
+#: ../../source/installation.rst:26
+msgid "Installing with a package manager"
+msgstr ""
+
+#: ../../source/installation.rst:28
+msgid ""
+"Most package managers maintain a version of NSD, although this version "
+"can be outdated if this package has not been updated recently. If you "
+"like to upgrade to the latest version, we recommend :ref:`compiling NSD "
+"yourself<Building from source/Compiling>`."
+msgstr ""
+
+#: ../../source/installation.rst:35
+msgid "Debian/Ubuntu"
+msgstr ""
+
+#: ../../source/installation.rst:37
+msgid "Installing NSD with the built-in package manager should be as easy as:"
+msgstr ""
+
+#: ../../source/installation.rst:44
+msgid ""
+"This gives you a compiled and running version of NSD ready to :doc:`be "
+"configured<configuration>`."
+msgstr ""
+
+#: ../../source/installation.rst:49
+msgid "Building from source/Compiling"
+msgstr ""
+
+#: ../../source/installation.rst:52
+msgid "Ubuntu 20.04 LTS"
+msgstr ""
+
+#: ../../source/installation.rst:54
+msgid ""
+"First of all, we need our copy of the NSD code. `On our website "
+"<https://nlnetlabs.nl/projects/nsd/about/>`_ you can find the latest "
+"version and the changelog. In this example we'll use version 4.3.7. "
+"Please note that this is not the latest version currently."
+msgstr ""
+
+#: ../../source/installation.rst:64
+msgid "We'll need some tools, such as a compiler and the :command:`make` program."
+msgstr ""
+
+#: ../../source/installation.rst:72
+msgid ""
+"The library components NSD needs are: ``libssl`` and ``libevent``, of "
+"which we need the \"dev\" version."
+msgstr ""
+
+#: ../../source/installation.rst:81
+msgid ""
+"We'll also need the tools to build the actual program. For this, NSD uses"
+" :command:`make` and internally it uses ``flex`` and ``yacc``, which we "
+"need to download as well."
+msgstr ""
+
+#: ../../source/installation.rst:91
+msgid ""
+"With all the requirements met, we can now start the compilation process "
+"in the NSD directory.  The first step here is configuring. With "
+":option:`./configure -h` you can look at the extensive list of "
+"configurables for NSD. A nice feature is that :command:`configure` will "
+"tell you what it's missing during configuration."
+msgstr ""
+
+#: ../../source/installation.rst:101
+msgid ""
+"If :command:`configure` gives no errors, we can continue to actually try "
+"compiling NSD using :command:`make`; compilation might take a while."
+msgstr ""
+
+#: ../../source/installation.rst:108
+msgid ""
+"After successfully compiling, we can install NSD to make it available for"
+" the machine."
+msgstr ""
+
+#: ../../source/installation.rst:115
+msgid ""
+"We now have fully compiled and installed version of NSD, and can continue"
+" to testing it."
+msgstr ""
+
+#: ../../source/installation.rst:120
+msgid "Testing"
+msgstr ""
+
+#: ../../source/installation.rst:122
+msgid ""
+"A simple test to determine if the installation was successful is to "
+"invoke the :command:`nsd` command with the :option:`-V` option, which is "
+"the \"version\" option. This shows the version and build options used and"
+" proves installation was successful."
+msgstr ""
+
+#: ../../source/installation.rst:131
+msgid ""
+"If all the previous steps were successful we can continue to configuring "
+"our NSD instance."
+msgstr ""
+
+#: ../../source/installation.rst:134
+msgid ""
+"Another handy trick you can use during testing is to run NSD in the "
+"foreground using the :option:`-d` option and increase the verbosity level"
+" using the :option:`-V 3` option. This allows you to see steps NSD takes "
+"and also where it fails."
+msgstr ""
+
+#: ../../source/installation.rst:139
+msgid ""
+"Now that NSD is installed we can :doc:`continue to configuring "
+"it<configuration>`."
+msgstr ""
+

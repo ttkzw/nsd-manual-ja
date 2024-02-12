@@ -1,0 +1,411 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001–2024, NLnet Labs
+# This file is distributed under the same license as the NSD package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NSD 4.3.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-12 09:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/reference/configure-options.rst:2
+msgid "Configure Options"
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:4
+msgid ""
+"NSD can be configured using GNU autoconf's configure script. In addition "
+"to standard configure options, one may use the following:"
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:9
+msgid "CC=compiler"
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:8
+msgid ""
+"Specify the C compiler. The default is gcc or cc. The compiler must "
+"support ANSI C89."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:12
+msgid "CPPFLAGS=flags"
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:12
+msgid "Specify the C preprocessor flags.  Such as ``-I<includedir>``."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:18
+msgid "CFLAGS=flags"
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:15
+msgid ""
+"Specify the C compiler flags. These include code generation, "
+"optimisation, warning, and debugging flags. These flags are also passed "
+"to the linker."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:18
+msgid "The default for gcc is ``-g -O2``."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:21
+msgid "LD=linker"
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:21
+msgid "Specify the linker (defaults to the C compiler)."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:24
+msgid "LDFLAGS=flags"
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:24
+msgid "Specify linker flags."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:27
+msgid "LIBS=libs"
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:27
+msgid "Specify additional libraries to link with."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:30
+msgid ""
+"Configure NSD as a root server. Unless this option is specified, NSD will"
+" refuse to serve the ``.`` zone as a misconfiguration safeguard."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:34
+msgid "Disables IPv6 support in NSD."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:37
+msgid ""
+"Enable some internal development checks.  Useful if you want to modify "
+"NSD. This option enables the standard C \"assert\" macro and compiler "
+"warnings."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:40
+msgid ""
+"This will instruct NSD to be stricter when validating its input. This "
+"could lead to a reduced service level."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:44
+msgid "Enables BIND8-like statistics."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:47
+msgid "Enables rate limiting, based on query name, type and source."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:50
+msgid "Enables draft RRtypes."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:53
+msgid "Specified, NSD configuration directory, default :file:`/etc/nsd`."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:56
+msgid "Pathname to the NSD configuration file, default :file:`/etc/nsd/nsd.conf`."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:59
+msgid ""
+"Pathname to the NSD pidfile, default is platform specific, mostly "
+":file:`/var/run/nsd.pid`."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:63
+msgid "Pathname to the NSD database, default is :file:`/etc/nsd/nsd.db`."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:66
+msgid "NSD default location for master zone files, default :file:`/etc/nsd/`."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:69
+msgid "User name or ID to answer the queries with, default is ``nsd``."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:72
+msgid ""
+"Specify the syslog facility to use.  The default is LOG_DAEMON. See the "
+"syslog(3) manual page for the available facilities."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:76
+msgid ""
+"Specity the location of the ``libevent`` library (or libev). ``--with-"
+"libevent=no`` uses a builtin portable implementation (select())."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:80
+msgid ""
+"Specify the location of the OpenSSL libraries. OpenSSL 0.9.7 or higher is"
+" required for TSIG support."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:84
+msgid "Startup priority for NSD."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:87
+msgid "Shutdown priority for NSD."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:90
+msgid "Set the default TCP timeout (in seconds). The default is 120 seconds."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:93
+msgid ""
+"Disable NSEC3 support. With NSEC3 support enabled, very large zones, also"
+" non-NSEC3 zones, use about 20% more memory."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:97
+msgid ""
+"Disable minimal responses. If disabled, responses are more likely to get "
+"truncated, resulting in TCP fallback.  When enabled (by default) NSD will"
+" leave out RRsets to make responses fit inside one datagram, but for "
+"shorter responses the full normal response is carried."
+msgstr ""
+
+#: ../../source/reference/configure-options.rst:103
+msgid ""
+"Disable large file support (64 bit file lengths). Makes off_t a 32bit "
+"length during compilation."
+msgstr ""
+
+#: ../../source/reference/grammar.rst:2
+msgid "Grammar for DNS Zone Files"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:4
+msgid ""
+"It is near impossible to write a clean lexer/grammar for DNS "
+"(:rfc:`1035`) zone files. At first it looks like it is easy to make such "
+"a beast, but when you start implementing it the details make it messy."
+msgstr ""
+
+#: ../../source/reference/grammar.rst:9
+msgid ""
+"Since as early as NSD 1.4, the parser relies on Bison and Flex, tools for"
+" building programs that handle structured input. Compared to the previous"
+" implementation there is a slight decrease in speed (10-20%), but as the "
+"zone compiler is not critical to the performance of NSD, this not too "
+"relevant. The lexer part is located in the file `zlexer.lex "
+"<https://github.com/NLnetLabs/nsd/blob/master/zlexer.lex>`_, the grammar "
+"is in `zparser.y "
+"<https://github.com/NLnetLabs/nsd/blob/master/zparser.y>`_."
+msgstr ""
+
+#: ../../source/reference/grammar.rst:18
+msgid "Zone File Lexer"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:20
+msgid ""
+"Finding a good grammar and lexer for BIND zone files is rather hard. "
+"There are no real keywords and the meaning of most of the strings depends"
+" on the position relative to the other strings. An example, the following"
+" is a valid SOA record:"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:29
+msgid ""
+"This SOA records means the administrator has an email address of "
+"``soa@example.org``. and the first nameserver is named "
+"``soa.example.org``. Both completely valid. The numbers are of course "
+"totally bogus."
+msgstr ""
+
+#: ../../source/reference/grammar.rst:33
+msgid "Another example would be:"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:40
+msgid ""
+"The parsing of parentheses was also not trivial. Whitespace is also "
+"significant in zonefiles. The TAB before SOA has to be returned as "
+"previous_domain token by the lexer. Newlines inside parentheses are "
+"returned as SPACE which works but required some changes in the "
+"definitions of the resource records."
+msgstr ""
+
+#: ../../source/reference/grammar.rst:45
+msgid ""
+"As shown above a simple ``grep -i`` for SOA does not do the trick. The "
+"lexer takes care of this tricky part by using an extra variable ``in_rr``"
+" which is an enum containing: ``outside``, ``expecting_dname``, "
+"``after_dname``, ``reading_type``. The semantics are as follows:"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:50
+msgid "``outside``, not in an RR (start of a line or a $-directive);"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:51
+msgid "``expecting_dname``, parse owner name of RR;"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:52
+msgid "``after_dname``, parse ttl, class;"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:53
+msgid "``reading_type``, we expect the RR type now;"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:55
+msgid ""
+"With ``in_rr`` the lexer can say that in the first example above the "
+"first SOA is the actual record type, because it is located after a TAB. "
+"After we have found the TAB we set ``in_rr`` to ``after_dname`` which "
+"means we actually are expecting a RR type."
+msgstr ""
+
+#: ../../source/reference/grammar.rst:60
+msgid ""
+"Again this is also not trivial because the class (IN) and TTL are also "
+"optional, if there are not specified we should substitute the current "
+"defaults from the zone we are parsing (this happens in the grammar). A "
+"DNS zone file is further complicated by the unknown RR record types."
+msgstr ""
+
+#: ../../source/reference/grammar.rst:66
+msgid "Zone File Grammar"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:68
+msgid ""
+"After the lexer was written the grammar itself is quite clean and nice. "
+"The basic idea is that every RR consists of single line (the parentheses "
+"are handled in the lexer - so this really is the case). If a line is not "
+"a RR it is either a comment, empty or a $-directive. Some $-directives "
+"are handled inside the lexer ($INCLUDE) while others ($ORIGIN) must be "
+"dealt with inside the grammer."
+msgstr ""
+
+#: ../../source/reference/grammar.rst:74
+msgid "An RR is defined as:"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:80
+msgid "and:"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:86
+msgid "And then we have a whole list of:"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:94
+msgid ""
+"which are then parsed by using the ``rdata_`` rule. Shown here is the one"
+" for the SOA:"
+msgstr ""
+
+#: ../../source/reference/grammar.rst:120
+msgid ""
+"The semantic actions in the grammer store the RR data for processing by "
+"the zone compiler. The resulting database is then used by NSD the serve "
+"the data."
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:2
+msgid "Diagnosing NSD Log Entries"
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:4
+msgid ""
+"NSD will print log messages to the system log (or ``logfile:`` "
+"configuration entry). Some of these messages are covered here."
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:10
+msgid "Reload process <pid> failed with status <s>, continuing with old database"
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:8
+msgid ""
+"This log message indicates the reload process of NSD has failed for some "
+"reason.  This can be anything from a missing database file to internal "
+"errors."
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:14
+msgid "snipping off trailing partial part of <ixfr.db>"
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:13
+msgid ""
+"The file :file:`ixfr.db` contains only part of expected data. The "
+"corruption is removed by snipping off the trailing part."
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:19
+msgid "memory recyclebin holds <num> bytes"
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:17
+msgid ""
+"This is printed for every reload. NSD allocates and deallocates memory to"
+" service IXFR updates. The recycle bin holds deallocated memory ready for"
+" future use. If the number grows too large, a restart resets it."
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:32
+msgid "xfrd: max number of tcp connections (32) reached"
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:22
+msgid ""
+"This line is printed when more than 32 zones need a zone transfer at the "
+"same time.  The value is a compile constant (``xfrd-tcp.h``), but if this"
+" happens often for you, we could make this a config option.  NSD will "
+"reuse existing TCP connections to the same primary (determined by IP "
+"address) to transfer up to 64k zones from that primary.  Thus this error "
+"should only happen with more than 32 primaries or more than 64\\*32=2M "
+"zones that need to be updated at the same time."
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:30
+msgid ""
+"If this happens, more zones have to wait until a zone transfer completes "
+"(or is aborted) before they can have a zone transfer too. This waiting "
+"list has no size limit."
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:37
+msgid "error: <zone> NSEC3PARAM entry <num> has unknown hash algo <number>"
+msgstr ""
+
+#: ../../source/reference/log-diagnosis.rst:35
+msgid ""
+"This error means that the zone has NSEC3 chain(s) with hash algorithms "
+"that are not supported by this version of NSD, and thus cannot be served "
+"by NSD. If there are also no NSECs or NSEC3 chain(s) with known hash "
+"algorithms, NSD will not be able to serve DNSSEC authenticated denials "
+"for the zone."
+msgstr ""
+

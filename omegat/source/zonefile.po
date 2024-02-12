@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001–2024, NLnet Labs
+# This file is distributed under the same license as the NSD package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NSD 4.3.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-12 09:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/zonefile.rst:2
+msgid "Zonefile example"
+msgstr ""
+
+#: ../../source/zonefile.rst:4
+msgid "On this page we give an example of a basic zone file and it's contents."
+msgstr ""
+
+#: ../../source/zonefile.rst:6
+msgid ""
+"We recommend using the :command:`nsd-checkzone` tool to verify that you "
+"have a working zone."
+msgstr ""
+
+#: ../../source/zonefile.rst:9
+msgid "Creating a zone"
+msgstr ""
+
+#: ../../source/zonefile.rst:11
+msgid ""
+"A zone needs a SOA (Source Of Authority) record. For the exact structure "
+"we refer you to `the wiki page "
+"<https://en.wikipedia.org/wiki/SOA_record>`_. Note that all records must "
+"Fully Qualified Domain Names (FQDNs) which adds a ``.`` to the domain "
+"name. In this example the FQDN is: ``example.com.``. This is in contrast "
+"to relative domain names, where the origin gets appended (so in the "
+"example below, ``www`` gets expanded to ``www.example.com.``)."
+msgstr ""
+
+#: ../../source/zonefile.rst:13
+msgid ""
+"Also note that ``@`` symbol in the zone file refers to the ``$ORIGIN`` "
+"parameter. To have multi-line resource records opening and closing "
+"brackets can be used to ignore linebreaks. Finally, if a name at the "
+"start of a record is missed, the name from the previous entry gets used "
+"(This is why all three A records are equivalent)."
+msgstr ""
+

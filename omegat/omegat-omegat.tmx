@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="6.0.0_0_1bf1729c" segtype="sentence" srclang="en-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="en-US">
+        <seg>:command:`NSD` is a complete implementation of an  authoritative DNS nameserver.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="taki" changedate="20240212T064329Z" creationid="taki" creationdate="20240212T064329Z">
+        <seg>:command:`NSD`は権威DNSサーバーの完全な実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Description</seg>
+      </tuv>
+      <tuv lang="ja" changeid="taki" changedate="20240212T064158Z" creationid="taki" creationdate="20240212T064158Z">
+        <seg>概要</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zone Expiry of Secondary Zones &mdash; NSD 4.3.9 ドキュメント</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/dark.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/light.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Interfaces" href="interfaces.html" />
+    <link rel="prev" title="Using Transaction Signature (TSIG)" href="using-tsig.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/nsd-duotone-white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                4.3.9
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zonefile.html">Zonefile example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Running</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-tsig.html">Using Transaction Signature (TSIG)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Zone Expiry of Secondary Zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuning.html">Tuning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manual Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manpages/nsd.html">nsd(8)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manpages/nsd-checkconf.html">nsd-checkconf(8)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manpages/nsd-checkzone.html">nsd-checkzone(8)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manpages/nsd.conf.html">nsd.conf(5)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manpages/nsd-control.html">nsd-control(8)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/configure-options.html">Configure Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/log-diagnosis.html">Diagnosing NSD Log Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/grammar.html">Grammar for DNS Zone Files</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NSD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Zone Expiry of Secondary Zones</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/running/zone-expiry.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="zone-expiry-of-secondary-zones">
+<h1>Zone Expiry of Secondary Zones<a class="headerlink" href="#zone-expiry-of-secondary-zones" title="この見出しへのパーマリンク">¶</a></h1>
+<p>NSD will keep track of the status of secondary zones, according to the timing
+values in the SOA record for the zone. When the refresh time of a zone is
+reached, the serial number is checked and a zone transfer is started if the zone
+has changed. Each primary server is tried in turn.</p>
+<p>Master zones cannot expire so they are always served. Zones are interpreted
+primary zones if they have no <code class="docutils literal notranslate"><span class="pre">request-xfr:</span></code> statements in the config file.</p>
+<p>After the expire timeout (from the SOA record at the zone apex) is reached, the
+zone becomes expired. NSD will return <code class="docutils literal notranslate"><span class="pre">SERVFAIL</span></code> for expired zones, and will
+attempt to perform a zone transfer from any of the primaries. After a zone
+transfer succeeds, or if the primary indicates that the SOA serial number is
+still the same, the zone will be OK again.</p>
+<p>In contrast with e.g. BIND, the inception time for a secondary zone is stored on
+disk (in <code class="docutils literal notranslate"><span class="pre">xfrdfile:</span> <span class="pre">&quot;xfrd.state&quot;</span></code>), together with timeouts. If a secondary
+zone acquisition time is recent enough, this means that NSD can start serving a
+zone immediately on loading, without querying the primary server.</p>
+<p>If your secondary zone has expired and no primaries can be reached, but you
+still want NSD to serve the zone, then you can delete the <code class="file docutils literal notranslate"><span class="pre">xfrd.state</span></code>
+file, but leave the zone file for the zone intact. Make sure to stop NSD before
+you delete the file, as NSD writes it on exit. Upon loading NSD will treat the
+zone file that you as operator have provided as recent and will serve the zone.
+Even though NSD will start to serve the zone immediately, the zone will expire
+after the timeout is reached again. NSD will also attempt to confirm that you
+have provided the correct data by polling the primaries. So when the primary
+servers come back up, it will transfer the updated zone within &lt;retry timeout
+from SOA&gt; seconds.</p>
+<p>In general it is possible to provide zone files for both primary and secondary
+zones manually (say from email or rsync). Reload with SIGHUP or
+<strong class="command">nsd-control reload</strong> to read the new zone file contents into the name
+database. When this is done the new zone will be served. For primary zones, NSD
+will issue notifications to all configured <code class="docutils literal notranslate"><span class="pre">notify:</span></code> targets. For secondary
+zones the above happens; NSD attempts to validate the zone from the primary
+(checking its SOA serial number).</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="using-tsig.html" class="btn btn-neutral float-left" title="Using Transaction Signature (TSIG)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="interfaces.html" class="btn btn-neutral float-right" title="Interfaces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2001–2024, NLnet Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

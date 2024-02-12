@@ -1,0 +1,2 @@
+# nsd-manual jp
+

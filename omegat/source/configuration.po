@@ -1,0 +1,328 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001–2024, NLnet Labs
+# This file is distributed under the same license as the NSD package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NSD 4.3.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-12 09:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/configuration.rst:2
+msgid "Configuration"
+msgstr ""
+
+#: ../../source/configuration.rst:4
+msgid ""
+"NSD has a vast array of configuration options for advanced use cases. To "
+"configure the application, a ``nsd.conf`` configuration file used. The "
+"file format has attributes and values, and some attributes have "
+"attributes inside them."
+msgstr ""
+
+#: ../../source/configuration.rst:9
+msgid "The instructions in this page assume that NSD is already installed."
+msgstr ""
+
+#: ../../source/configuration.rst:12
+msgid "The configuration file"
+msgstr ""
+
+#: ../../source/configuration.rst:15
+msgid ""
+"The configuration NSD uses is specified in the configuration file, which "
+"can be supplied to NSD using the :option:`-c` option. In the "
+":doc:`reference<manpages/nsd.conf>` an example ``nsd.conf`` can be found "
+"as well as the complete documentation of all the configurable options. "
+"The same example and reference can be found on your system using the "
+"``man nsd.conf`` command."
+msgstr ""
+
+#: ../../source/configuration.rst:18
+msgid "The basic rules are of the config file are:"
+msgstr ""
+
+#: ../../source/configuration.rst:20
+msgid "The used notation is ``attribute: value``"
+msgstr ""
+
+#: ../../source/configuration.rst:21
+msgid "Comments start with ``#`` and extend to the end of a line"
+msgstr ""
+
+#: ../../source/configuration.rst:22
+msgid "Empty lines are ignored, as is whitespace at the beginning of a line"
+msgstr ""
+
+#: ../../source/configuration.rst:23
+msgid ""
+"Quotes can be used, for names containing spaces, e.g. ``\"file "
+"name.zone\"``"
+msgstr ""
+
+#: ../../source/configuration.rst:26
+msgid ""
+"Below we'll give an example config file, which specifies options for the "
+"NSD server, zone files, primaries and secondaries. This provide basic "
+"config which can be used for as a starting point."
+msgstr ""
+
+#: ../../source/configuration.rst:28
+msgid ""
+"Note that for the remainder we assume the default location of NSD is "
+"``\\etc\\nsd`` though this may vary on your system."
+msgstr ""
+
+#: ../../source/configuration.rst:30
+msgid ""
+"The example configuration below specifies options for the NSD server, "
+"zone files, primaries and secondaries."
+msgstr ""
+
+#: ../../source/configuration.rst:33
+msgid "Here is an example config for ``example.com``:"
+msgstr ""
+
+#: ../../source/configuration.rst:74
+msgid ""
+"We recommend not using the database (so using ``database: \"\"``) as this"
+" is will slow down NSD operation. Depending on your needs, we also "
+"recommend keeping the ``server-count`` lower or equal to the number of "
+"CPU cores your system has."
+msgstr ""
+
+#: ../../source/configuration.rst:76
+msgid ""
+"Optionally, you can control NSD (from the same or even a different "
+"device) by using the entries under the `remote-control` clause in the "
+"config. Using this tool, NSD can be controlled (find the reference of all"
+" the options :doc:`here<manpages/nsd-control>`) which makes controlling "
+"NSD much easier. If your install does not come with the keys needed for "
+"remote-control use pre-made, you can generate the keys using the :command"
+":`nsd-control-setup` command, which will create them for you. In the "
+"section below we will go into more detail about this option."
+msgstr ""
+
+#: ../../source/configuration.rst:78
+msgid ""
+"You can test the config with :command:`nsd-checkconf`. This tool will "
+"tell you what is wrong with the config and where the error occurs."
+msgstr ""
+
+#: ../../source/configuration.rst:80
+msgid ""
+"If you are happy with the config and any modifications you may have done,"
+" you can create the zone to go with the file we mentioned in the config. "
+"We show an example zone at :doc:`the zonefile example<zonefile>`."
+msgstr ""
+
+#: ../../source/configuration.rst:84
+msgid "Setting up a secondary zone"
+msgstr ""
+
+#: ../../source/configuration.rst:86
+msgid ""
+"If your needs go further than just a few zones that are managed locally, "
+"NSD has got you covered. We won't go into the theoretical details of "
+"primaries and secondaries here (we recommend `this blog "
+"<https://www.cloudflare.com/en-gb/learning/dns/glossary/primary-"
+"secondary-dns/>`_), but we will show how to configure it."
+msgstr ""
+
+#: ../../source/configuration.rst:89
+msgid "The example for a secondary looks like this:"
+msgstr ""
+
+#: ../../source/configuration.rst:109
+msgid ""
+"Note that the ``NOKEY`` keyword above are for testing purposes only, as "
+"this can introduce vulnerabilities when used in production environments."
+msgstr ""
+
+#: ../../source/configuration.rst:113
+msgid ""
+"For a secondary zone we list the primaries by IP address. Below is an "
+"example of a secondary zone with two primary servers. If a primary only "
+"supports AXFR transfers and not IXFR transfers (like NSD), specify the "
+"primary as ``request-xfr: AXFR <ip_address> <key>``. By default, all zone"
+" transfer requests are made over TCP. If you want the IXFR request be "
+"transmitted over UDP, use ``request-xfr: UDP <ip address> <key>``."
+msgstr ""
+
+#: ../../source/configuration.rst:130
+msgid ""
+"By default, a secondary will fallback to AXFR requests if the primary "
+"told us it does not support IXFR. You can configure the secondary not to "
+"do AXFR fallback with:"
+msgstr ""
+
+#: ../../source/configuration.rst:138
+msgid ""
+"For a primary zone, list the secondary servers, by IP address or subnet. "
+"Below is an example of a primary zone with two secondary servers:"
+msgstr ""
+
+#: ../../source/configuration.rst:151
+msgid ""
+"You also can set the outgoing interface for notifies and zone transfer "
+"requests to satisfy access control lists at the other end:"
+msgstr ""
+
+#: ../../source/configuration.rst:158
+msgid ""
+"By default, NSD will retry a notify up to five times. You can override "
+"that value with:"
+msgstr ""
+
+#: ../../source/configuration.rst:165
+msgid ""
+"Zone transfers can be secured with TSIG keys, replace NOKEY with the name"
+" of the TSIG key to use. See :doc:`Using TSIG<running/using-tsig>` for "
+"details."
+msgstr ""
+
+#: ../../source/configuration.rst:168
+msgid ""
+"Since NSD is written to be run on the root name servers, the config file"
+"  can to contain something like:"
+msgstr ""
+
+#: ../../source/configuration.rst:179
+msgid ""
+"You should only do that if you're intending to run a root server, NSD is "
+"not suited for running a ``.`` cache. Therefore if you choose to serve "
+"the ``.`` zone you have to make sure that the complete root zone is "
+"timely and fully updated."
+msgstr ""
+
+#: ../../source/configuration.rst:184
+msgid ""
+"To prevent misconfiguration, NSD configure has the ``--enable-root-"
+"server`` option, that is by default disabled."
+msgstr ""
+
+#: ../../source/configuration.rst:187
+msgid ""
+"In the config file, you can use patterns. A pattern can have the same "
+"configuration statements that a zone can have.  And then you can "
+"``include-pattern: <name-of-pattern>`` in a zone (or in another pattern) "
+"to apply those settings. This can be used to organise the settings."
+msgstr ""
+
+#: ../../source/configuration.rst:194
+msgid "Remote controlling NSD"
+msgstr ""
+
+#: ../../source/configuration.rst:196
+msgid ""
+"The :command:`nsd-control` tool is also controlled from the ``nsd.conf`` "
+"config file (and it's manpage is found :doc:`here<manpages/nsd-"
+"control>`). It uses TLS encrypted transport to 127.0.0.1, and if you want"
+" to use it you have to setup the keys and also edit the config file.  You"
+" can leave the remote-control disabled (the secure default), or opt to "
+"turn it on:"
+msgstr ""
+
+#: ../../source/configuration.rst:212
+msgid ""
+"By default :command:`nsd-control` is limited to localhost, as well as "
+"encrypted, but some people may want to remotely administer their "
+"nameserver.  To control NSD remotely, configure :command:`nsd-control` to"
+" listen to the public IP address with ``control-interface: <IP>`` after "
+"the control-enable statement."
+msgstr ""
+
+#: ../../source/configuration.rst:216
+msgid ""
+"Furthermore, you copy the key files :file:`/etc/nsd/nsd_server.pem` "
+":file:`/etc/nsd/nsd_control.*` to a remote host on the internet; on that "
+"host you can run :command:`nsd-control` with :option:`-c` ``<special "
+"config file>`` which references same IP address ``control-interface`` and"
+" references the copies of the key files with ``server-cert-file``, "
+"``control-key-file`` and ``control-cert-file`` config lines after the "
+"``control-enable`` statement.  The nsd-server authenticates the nsd-"
+"control client, and also the :command:`nsd-control` client authenticates "
+"the nsd-server."
+msgstr ""
+
+#: ../../source/configuration.rst:227
+msgid "Starting up the first time"
+msgstr ""
+
+#: ../../source/configuration.rst:229
+msgid "When you are done with the configuration file, check the syntax using"
+msgstr ""
+
+#: ../../source/configuration.rst:235
+msgid ""
+"The zone files are read by the daemon, which builds :file:`nsd.db` with "
+"their contents. You can start the daemon in a number of ways:"
+msgstr ""
+
+#: ../../source/configuration.rst:244
+msgid ""
+"To check if the daemon is running look with :command:`ps`, "
+":command:`top`, or if you enabled :command:`nsd-control`:"
+msgstr ""
+
+#: ../../source/configuration.rst:251
+msgid ""
+"To reload changed zone files after you edited them, without stopping the "
+"daemon, use this to check if files are modified:"
+msgstr ""
+
+#: ../../source/configuration.rst:259
+msgid ""
+"With :command:`nsd-control` you can also reread the config file, in case "
+"of new zones, etc."
+msgstr ""
+
+#: ../../source/configuration.rst:266
+msgid "To restart the daemon:"
+msgstr ""
+
+#: ../../source/configuration.rst:272
+msgid "To shut it down (for example on the system shutdown) do:"
+msgstr ""
+
+#: ../../source/configuration.rst:279
+msgid ""
+"NSD will automatically keep track of secondary zones and update them when"
+" needed. When primary zones are updated and reloaded notifications are "
+"sent to secondary servers."
+msgstr ""
+
+#: ../../source/configuration.rst:283
+msgid ""
+"The zone transfers are applied to :file:`nsd.db` by the daemon.  To write"
+" changed contents of the zone files for secondary zones to disk in the "
+"text-based zone file format, issue :command:`nsd-control` write."
+msgstr ""
+
+#: ../../source/configuration.rst:287
+msgid ""
+"NSD will send notifications to secondary zones if a primary zone is "
+"updated. NSD will check for updates at primary servers periodically and "
+"transfer the updated zone by AXFR/IXFR and reload the new zone contents."
+msgstr ""
+
+#: ../../source/configuration.rst:291
+msgid ""
+"If you wish exert manual control use :command:`nsd-control notify`, "
+":command:`transfer` and :command:`force_transfer` commands.  The transfer"
+" command will check for new versions of the secondary zones hosted by "
+"this NSD. The notify command will send notifications to the secondary "
+"servers configured in ``notify:`` statements."
+msgstr ""
+
